@@ -3,6 +3,330 @@ class SpriteKind:
     building = SpriteKind.create()
     NPC = SpriteKind.create()
 
+def on_on_created(sprite):
+    while True:
+        if sprite.vx > 0:
+            animation.run_image_animation(sprite,
+                [img("""
+                        ........................
+                        ........................
+                        ...........cc...........
+                        ...........cccc.........
+                        .......cc...ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb555555ff155555c
+                        .....ccb55555555ff55d55c
+                        ......b5555555555555555c
+                        ...c..b555d55555bb13bbc.
+                        ...cccd55ddddd55bb3335c.
+                        ....cbdddddddddd55b335c.
+                        ..cccdddddb55bdddd5555c.
+                        ..cccdddddb555bbbbcccc..
+                        ...ccddddddb5555cbcdc...
+                        ccccbdddddddcb55cbcc....
+                        cddddddddd55dbccbbc.....
+                        cbdddddddd555dbbbcc.....
+                        .ccbdddbbdd555bbcdbcc...
+                        ...cccbbbbdd55ccdddbc...
+                        ......cccbdddbccccccc...
+                        ........cdd555dc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ...........ccc..........
+                        ...........cccc.........
+                        .......ccc..ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb555555ff155555c
+                        ......cb55555555ff55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb13bbc.
+                        ...cccd55ddddd555b3335c.
+                        .....bdddddddddd55b335c.
+                        ..cccdddddb55bbddd5555c.
+                        ..cccdddddb555bbbbcccc..
+                        ...ccddddddb5555cbcdc...
+                        ccccbdddddd5cb55cbcc....
+                        cddddddddd5555ccbbc.....
+                        .cddddddbdd555bbbcc.....
+                        ..ccdddbbbdd55cbcdc.....
+                        ....ccbbcbddddccdddcc...
+                        ......cccdd555dcccccc...
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ............cc..........
+                        ............ccc.........
+                        ........ccc.ccccccc.....
+                        ........ccccc555555cc...
+                        ........ccb5555555555c..
+                        .....ccc.b55555ff15555c.
+                        .....cccb5555555ff55555c
+                        ......cb555555555555d55c
+                        ....c.b555555555bb55555c
+                        ....ccb555ddd5555b13bbc.
+                        ....ccd55ddddd555b3335c.
+                        .....cdd5ddddddd55b335c.
+                        ...c.bddddb555bbbd555c..
+                        ...ccdddddbb55555bccc...
+                        ...ccdddddddcc555bcc....
+                        ...ccddddddddbcccbcccc..
+                        .ccbddddddd55dbbbbc55c..
+                        ccddddddddd555dbbcc5c...
+                        cddddddbbbdd555bbccc....
+                        .ccddddbbbbdd55bcc......
+                        ...cccbbbbbdddbcddcc....
+                        .....cccccdd555dcccc....
+                        ..........cccccc........
+                        """),
+                    img("""
+                        ........................
+                        ............cc..........
+                        ............ccc.........
+                        ........ccc.ccccccc.....
+                        ........ccccc555555cc...
+                        ........ccb5555555555c..
+                        .....ccc.b55555ff15555c.
+                        .....cccb5555555ff55555c
+                        ......cb555555555555d55c
+                        ....c.b555555555bb55555c
+                        ....ccb555ddd5555b13bbc.
+                        ....ccd55ddddd555b3335c.
+                        .....cdd5ddddddd55b335c.
+                        ...c.bddddb555bbbd555c..
+                        ...ccdddddbb55555bccc...
+                        ...ccdddddddcc555bcc....
+                        .ccccdddddddddcccbcccc..
+                        .cdcdddddddd55dbbbc55c..
+                        .cdddddddddd555dccc5c...
+                        .cbddddbbbbdd5d555cc....
+                        ..cbdddbbbbbdd5555......
+                        ...cccbbbbbbd5555c......
+                        .....cccccccc555c.......
+                        .............ccc........
+                        """),
+                    img("""
+                        ........................
+                        ............cc..........
+                        ............ccc.........
+                        ........ccc.ccccccc.....
+                        ........ccccc555555cc...
+                        ........ccb5555555555c..
+                        .....ccc.b55555ff15555c.
+                        .....cccb5555555ff55555c
+                        ......cb555555555555d55c
+                        ....c.b555555555bb55555c
+                        ....ccb555ddd5555b13bbc.
+                        ....ccd55ddddd555b3335c.
+                        .....cdd5ddddddd55b335c.
+                        ...c.bddddb555bbbd555c..
+                        ...ccdddddb555555bccc...
+                        ..cccddddddcc5555bcc....
+                        .cdccddddddddbcccbcccc..
+                        .cddbdddddddddbbbbc55c..
+                        .cdddddddddd55dbbbc5c...
+                        .cbddddbbbbd55ddbccc....
+                        ..cbdddbbbbd555dccc.....
+                        ...cccbbbbbbddd555c.....
+                        .....ccccccbd55555c.....
+                        ...........cc5555c......
+                        """),
+                    img("""
+                        ........................
+                        ............cc..........
+                        ............ccc.........
+                        ........cc..ccccccc.....
+                        ........ccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb555555ff155555c
+                        ......cb55555555ff55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb13bbc.
+                        ...cccd55ddddd555b3335c.
+                        ....ccdd5ddddddd55b335c.
+                        .....bddddb55bdddd5555c.
+                        ..cccdddddb55bbbbbcccc..
+                        .ccccddddddb5555cbcccc..
+                        .cdccdddddddc555cbc55c..
+                        .cdddddddddddcccbbc5c...
+                        .cbddddddd55dbbbbccc....
+                        .ccbdddddd555dbbbcbc....
+                        ..cccddbbbd555bbccc.....
+                        ....ccbbbbbd555cc.......
+                        ......ccccbddddbc.......
+                        ..........cd5555dc......
+                        """)],
+                200,
+                True)
+        else:
+            animation.run_image_animation(sprite,
+                [img("""
+                        ........................
+                        ........................
+                        ...........cc...........
+                        .........cccc...........
+                        .....ccccccc...cc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555551ff555555bccc.....
+                        c55d55ff55555555bcc.....
+                        c5555555555555555b......
+                        .cbb31bb55555d555b..c...
+                        .c5333bb55ddddd55dccc...
+                        .c533b55ddddddddddbc....
+                        .c5555ddddb55bdddddccc..
+                        ..ccccbbbb555bdddddccc..
+                        ...cdcbc5555bddddddcc...
+                        ....ccbc55bcdddddddbcccc
+                        .....cbbccbd55dddddddddc
+                        .....ccbbbd555ddddddddbc
+                        ...ccbdcbb555ddbbdddbcc.
+                        ...cbdddcc55ddbbbbccc...
+                        ...cccccccbdddbccc......
+                        ........cd555ddc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ..........ccc...........
+                        .........cccc...........
+                        .....ccccccc..ccc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555551ff555555bccc.....
+                        c55d55ff55555555bc......
+                        c5555555555555555b......
+                        .cbb31bb5555dd555b.cc...
+                        .c5333b555ddddd55dccc...
+                        .c533b55ddddddddddb.....
+                        .c5555dddbb55bdddddccc..
+                        ..ccccbbbb555bdddddccc..
+                        ...cdcbc5555bddddddcc...
+                        ....ccbc55bc5ddddddbcccc
+                        .....cbbcc5555dddddddddc
+                        .....ccbbb555ddbddddddc.
+                        .....cdcbc55ddbbbdddcc..
+                        ...ccdddccddddbcbbcc....
+                        ...ccccccd555ddccc......
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ..........cc............
+                        .........ccc............
+                        .....ccccccc.ccc........
+                        ...cc555555ccccc........
+                        ..c5555555555bcc........
+                        .c55551ff55555b.ccc.....
+                        c55555ff5555555bccc.....
+                        c55d555555555555bc......
+                        c55555bb555555555b.c....
+                        .cbb31b5555ddd555bcc....
+                        .c5333b555ddddd55dcc....
+                        .c533b55ddddddd5ddc.....
+                        ..c555dbbb555bddddb.c...
+                        ...cccb55555bbdddddcc...
+                        ....ccb555ccdddddddcc...
+                        ..ccccbcccbddddddddcc...
+                        ..c55cbbbbd55dddddddbcc.
+                        ...c5ccbbd555dddddddddcc
+                        ....cccbb555ddbbbddddddc
+                        ......ccb55ddbbbbddddcc.
+                        ....ccddcbdddbbbbbccc...
+                        ....ccccd555ddccccc.....
+                        ........cccccc..........
+                        """),
+                    img("""
+                        ........................
+                        ..........cc............
+                        .........ccc............
+                        .....ccccccc.ccc........
+                        ...cc555555ccccc........
+                        ..c5555555555bcc........
+                        .c55551ff55555b.ccc.....
+                        c55555ff5555555bccc.....
+                        c55d555555555555bc......
+                        c55555bb555555555b.c....
+                        .cbb31b5555ddd555bcc....
+                        .c5333b555ddddd55dcc....
+                        .c533b55ddddddd5ddc.....
+                        ..c555dbbb555bddddb.c...
+                        ...cccb55555bbdddddcc...
+                        ....ccb555ccdddddddcc...
+                        ..ccccbcccdddddddddcccc.
+                        ..c55cbbbd55ddddddddcdc.
+                        ...c5cccd555ddddddddddc.
+                        ....cc555d5ddbbbbddddbc.
+                        ......5555ddbbbbbdddbc..
+                        ......c5555dbbbbbbccc...
+                        .......c555cccccccc.....
+                        ........ccc.............
+                        """),
+                    img("""
+                        ........................
+                        ..........cc............
+                        .........ccc............
+                        .....ccccccc.ccc........
+                        ...cc555555ccccc........
+                        ..c5555555555bcc........
+                        .c55551ff55555b.ccc.....
+                        c55555ff5555555bccc.....
+                        c55d555555555555bc......
+                        c55555bb555555555b.c....
+                        .cbb31b5555ddd555bcc....
+                        .c5333b555ddddd55dcc....
+                        .c533b55ddddddd5ddc.....
+                        ..c555dbbb555bddddb.c...
+                        ...cccb555555bdddddcc...
+                        ....ccb5555ccddddddccc..
+                        ..ccccbcccbddddddddccdc.
+                        ..c55cbbbbdddddddddbddc.
+                        ...c5cbbbd55ddddddddddc.
+                        ....cccbdd55dbbbbddddbc.
+                        .....cccd555dbbbbdddbc..
+                        .....c555dddbbbbbbccc...
+                        .....c55555dbcccccc.....
+                        ......c5555cc...........
+                        """),
+                    img("""
+                        ........................
+                        ..........cc............
+                        .........ccc............
+                        .....ccccccc..cc........
+                        ...cc555555ccccc........
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555551ff555555bccc.....
+                        c55d55ff55555555bc......
+                        c5555555555555555b......
+                        .cbb31bb5555dd555b.cc...
+                        .c5333b555ddddd55dccc...
+                        .c533b55ddddddd5ddcc....
+                        .c5555ddddb55bddddb.....
+                        ..ccccbbbbb55bdddddccc..
+                        ..ccccbc5555bddddddcccc.
+                        ..c55cbc555cdddddddccdc.
+                        ...c5cbbcccdddddddddddc.
+                        ....cccbbbbd55dddddddbc.
+                        ....cbcbbbd555ddddddbcc.
+                        .....cccbb555dbbbddccc..
+                        .......cc555dbbbbbcc....
+                        .......cbddddbcccc......
+                        ......cd5555dc..........
+                        """)],
+                200,
+                True)
+sprites.on_created(SpriteKind.enemy, on_on_created)
+
 def on_up_pressed():
     global lastDirection
     lastDirection = 0
@@ -83,9 +407,111 @@ def on_up_pressed():
         True)
 controller.up.on_event(ControllerButtonEvent.PRESSED, on_up_pressed)
 
+def on_on_overlap(sprite2, otherSprite):
+    global hasTools, gotOrders
+    if controller.A.is_pressed():
+        if sprites.read_data_string(otherSprite, "name") == "Redband" and not (hasTools):
+            game.show_long_text("You should get tools from Mustafa first.",
+                DialogLayout.BOTTOM)
+        elif sprites.read_data_string(otherSprite, "name") == "Mustafa" and hasTools:
+            pass
+        elif sprites.read_data_string(otherSprite, "name") == "Redband" and gotOrders:
+            pass
+        else:
+            game.show_long_text("" + sprites.read_data_string(otherSprite, "name") + ": " + sprites.read_data_string(otherSprite, "dialog"),
+                DialogLayout.BOTTOM)
+            if sprites.read_data_string(otherSprite, "name") == "Mustafa":
+                hasTools = True
+                music.stop_all_sounds()
+                music.play(music.melody_playable(music.power_up),
+                    music.PlaybackMode.UNTIL_DONE)
+                game.show_long_text("You've got your sword and shield!", DialogLayout.BOTTOM)
+                music.play(music.create_song(hex("""
+                        0096000408070205001c000f0a006400f4010a0000040000000000000000000000000000000002c80000000800012208001000012910001800012018002000012520002800012028003000012430003200011e34003600012038003a00021e203a003c00011d40004200011e44004600012048004a00021e204a004c00011d60006200011e64006600012068006a00021e206a006c00011d70007800012278008000011d80008800012288009000021e299000980001249800a000031e252aa000a8000120a800b0000127b000b8000120b800c0000127c000c800021e25c800d00002202ad000d8000125d800e000012209010e02026400000403780000040a000301000000640001c80000040100000000640001640000040100000000fa0004af00000401c80000040a00019600000414000501006400140005010000002c0104dc00000401fa0000040a0001c8000004140005d0076400140005d0070000c800029001f40105c201f4010a0005900114001400039001000005c201f4010500058403050032000584030000fa00049001000005c201f4010500058403c80032000584030500640005840300009001049001000005c201f4010500058403c80064000584030500c8000584030000f40105ac0d000404a00f00000a0004ac0d2003010004a00f0000280004ac0d9001010004a00f0000280002d00700040408070f0064000408070000c80003c800c8000e7d00c80019000e64000f0032000e78000000fa00032c01c8000ee100c80019000ec8000f0032000edc000000fa0003f401c8000ea901c80019000e90010f0032000ea4010000fa0001c8000004014b000000c800012c01000401c8000000c8000190010004012c010000c80002c800000404c8000f0064000496000000c80002c2010004045e010f006400042c010000640002c409000404c4096400960004f6090000f40102b80b000404b80b64002c0104f40b0000f401022003000004200300040a000420030000ea01029001000004900100040a000490010000900102d007000410d0076400960010d0070000c8004b00300031000103340035000104380039000203043a003b000102400041000103440045000104480049000203044a004b000102500051000103540055000104580059000203045a005b000102
+                        """)),
+                    music.PlaybackMode.LOOPING_IN_BACKGROUND)
+            elif sprites.read_data_string(otherSprite, "name") == "Redband":
+                gotOrders = True
+                game.show_long_text("Objective: go to Universe C.", DialogLayout.BOTTOM)
+        pause(500)
+sprites.on_overlap(SpriteKind.player, SpriteKind.NPC, on_on_overlap)
+
+def initOverworld():
+    global universeB, libertyIsland
+    universeB = overworld.create_map16(overworld.map_row16(overworld.tilemap16(tilemap("""
+                level0
+                """)),
+            overworld.tilemap16(tilemap("""
+                level40
+                """)),
+            overworld.tilemap16(tilemap("""
+                level3
+                """))),
+        overworld.map_row16(overworld.tilemap16(tilemap("""
+                level42
+                """)),
+            overworld.tilemap16(tilemap("""
+                level44
+                """)),
+            overworld.tilemap16(tilemap("""
+                level9
+                """))),
+        overworld.map_row16(overworld.tilemap16(tilemap("""
+                level46
+                """)),
+            overworld.tilemap16(tilemap("""
+                level48
+                """)),
+            overworld.tilemap16(tilemap("""
+                level15
+                """))))
+    libertyIsland = overworld.create_map16(overworld.map_row16(overworld.tilemap16(tilemap("""
+                level72
+                """)),
+            overworld.tilemap16(tilemap("""
+                level73
+                """)),
+            overworld.tilemap16(tilemap("""
+                level74
+                """))),
+        overworld.map_row16(overworld.tilemap16(tilemap("""
+                level79
+                """)),
+            overworld.tilemap16(tilemap("""
+                level80
+                """)),
+            overworld.tilemap16(tilemap("""
+                level87
+                """))),
+        overworld.map_row16(overworld.tilemap16(tilemap("""
+                level79
+                """)),
+            overworld.tilemap16(tilemap("""
+                level86
+                """)),
+            overworld.tilemap16(tilemap("""
+                level87
+                """))),
+        overworld.map_row16(overworld.tilemap16(tilemap("""
+                level91
+                """)),
+            overworld.tilemap16(tilemap("""
+                level92
+                """)),
+            overworld.tilemap16(tilemap("""
+                level93
+                """))))
+    scene.set_background_color(7)
+    overworld.set_overworld16(universeB)
+    overworld.set_animation_type(overworld.AnimationType.SCROLL)
+    overworld.set_player_sprite(Hiro)
+    overworld.load_map(0, 0)
+    overworld.set_walls_block_transitions(True)
+
 def on_map_loaded(overworldColumn, overworldRow, map2):
-    global mySprite
+    global mySprite, Dummy
     sprites.destroy_all_sprites_of_kind(SpriteKind.building)
+    sprites.destroy_all_sprites_of_kind(SpriteKind.enemy)
     sprites.destroy_all_sprites_of_kind(SpriteKind.NPC)
     if len(tiles.get_tiles_by_type(sprites.dungeon.floor_dark_diamond)) > 0:
         for brick in tiles.get_tiles_by_type(sprites.dungeon.floor_dark_diamond):
@@ -107,53 +533,64 @@ def on_map_loaded(overworldColumn, overworldRow, map2):
                 "Hey Hiro! Your sword and shield are ready!")
             sprites.set_data_string(mySprite, "name", "Mustafa")
             tiles.place_on_tile(mySprite, grass)
+    elif len(tiles.get_tiles_by_type(sprites.skillmap.island_tile4)) > 0:
+        for grass2 in tiles.get_tiles_by_type(sprites.skillmap.island_tile4):
+            mySprite = sprites.create(img("""
+                    . . . . f f f f . . . .
+                    . . f f e e e e f f . .
+                    . f e e e e e e e f f .
+                    f f e f e e e e e e f f
+                    f f f e e e e e e e e f
+                    f f f e e e e e e f e f
+                    f f f f e e e e f f f f
+                    f f f f f f f f f f f f
+                    f f f f f f f f f f f f
+                    . f f f f f f f f f f .
+                    . e f f f f f f f f e .
+                    e 4 f b b b b b b f 4 e
+                    4 d f d d d d d d c d 4
+                    4 4 f 6 6 6 6 6 6 f 4 4
+                    . . . f f f f f f . . .
+                    . . . f f . . f f . . .
+                    """),
+                SpriteKind.NPC)
+            sprites.set_data_string(mySprite,
+                "dialog",
+                "Ah, Hiro. There's an important matter to discuss. As you might have heard, a caveman's hut appeared out of nowhere last night. I have strong reasons to believe that Hamidon is behind this. He has a weapon that can break time and poof everything out of existence. Your mission, Hiro, is to destroy Hamidon and his weapon. For this, you'll have to free the four Dimension Spirits. The Spirit Of Time is completely possessed by Hamidon, so you'll have to free it last. The portal in the old dungeon is your ticket to Dimension C. There you must meet the president of the USA. Now go! The multiverse is counting on you.")
+            sprites.set_data_string(mySprite, "name", "Redband")
+            tiles.place_on_tile(mySprite, grass2)
+    if len(tiles.get_tiles_by_type(sprites.builtin.brick)) > 0:
+        Dummy = sprites.create(img("""
+                ........................
+                ........................
+                ...........ccc..........
+                ...........cccc.........
+                .......ccc..ccccccc.....
+                .......cccccc555555cc...
+                ........ccb5555555555c..
+                .....cc..b555555555555c.
+                .....cccb555555ff155555c
+                ......cb55555555ff55d55c
+                ......b5555555555555555c
+                ...cc.b555dd5555bb13bbc.
+                ...cccd55ddddd555b3335c.
+                .....bdddddddddd55b335c.
+                ..cccdddddb55bbddd5555c.
+                ..cccdddddb555bbbbcccc..
+                ...ccddddddb5555cbcdc...
+                ccccbdddddd5cb55cbcc....
+                cddddddddd5555ccbbc.....
+                .cddddddbdd555bbbcc.....
+                ..ccdddbbbdd55cbcdc.....
+                ....ccbbcbddddccdddcc...
+                ......cccdd555dcccccc...
+                ........cccccccc........
+                """),
+            SpriteKind.enemy)
+        tiles.place_on_random_tile(Dummy, sprites.builtin.brick)
+        Dummy.follow(Hiro, 10)
 overworld.on_map_loaded(on_map_loaded)
 
-def on_on_overlap(sprite, otherSprite):
-    global hasTools
-    if controller.B.is_pressed():
-        game.show_long_text(sprites.read_data_string(otherSprite, "dialog"),
-            DialogLayout.BOTTOM)
-        if sprites.read_data_string(otherSprite, "name") == "Mustafa":
-            hasTools = True
-            music.play(music.melody_playable(music.power_up),
-                music.PlaybackMode.UNTIL_DONE)
-            game.show_long_text("You've got your sword and shield!", DialogLayout.BOTTOM)
-sprites.on_overlap(SpriteKind.player, SpriteKind.NPC, on_on_overlap)
-
-def initOverworld():
-    scene.set_background_color(7)
-    overworld.set_overworld16(overworld.create_map16(overworld.map_row16(overworld.tilemap16(tilemap("""
-                    level0
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level40
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level3
-                    """))),
-            overworld.map_row16(overworld.tilemap16(tilemap("""
-                    level42
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level44
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level9
-                    """))),
-            overworld.map_row16(overworld.tilemap16(tilemap("""
-                    level46
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level48
-                    """)),
-                overworld.tilemap16(tilemap("""
-                    level15
-                    """)))))
-    overworld.set_animation_type(overworld.AnimationType.SCROLL)
-    overworld.set_player_sprite(Hiro)
-    overworld.load_map(0, 0)
-    overworld.set_walls_block_transitions(True)
 def endHiroAnim():
     animation.stop_animation(animation.AnimationTypes.IMAGE_ANIMATION, Hiro)
     if lastDirection == 0:
@@ -236,6 +673,175 @@ def endHiroAnim():
 def on_button_released():
     endHiroAnim()
 controller.any_button.on_event(ControllerButtonEvent.RELEASED, on_button_released)
+
+def on_left_pressed():
+    global lastDirection
+    lastDirection = 2
+    animation.run_image_animation(Hiro,
+        [img("""
+                . . . . f f f f f f . . . . . .
+                . . . f 2 f e e e e f f . . . .
+                . . f 2 2 2 f e e e e f f . . .
+                . . f e e e e f f e e e f . . .
+                . f e 2 2 2 2 e e f f f f . . .
+                . f 2 e f f f f 2 2 2 e f . . .
+                . f f f e e e f f f f f f f . .
+                . f e e 4 4 f b e 4 4 e f f . .
+                . . f e d d f 1 4 d 4 e e f . .
+                . . . f d d d d 4 e e e f . . .
+                . . . f e 4 4 4 e e f f . . . .
+                . . . f 2 2 2 e d d 4 . . . . .
+                . . . f 2 2 2 e d d e . . . . .
+                . . . f 5 5 4 f e e f . . . . .
+                . . . . f f f f f f . . . . . .
+                . . . . . . f f f . . . . . . .
+                """),
+            img("""
+                . . . . . . . . . . . . . . . .
+                . . . . f f f f f f . . . . . .
+                . . . f 2 f e e e e f f . . . .
+                . . f 2 2 2 f e e e e f f . . .
+                . . f e e e e f f e e e f . . .
+                . f e 2 2 2 2 e e f f f f . . .
+                . f 2 e f f f f 2 2 2 e f . . .
+                . f f f e e e f f f f f f f . .
+                . f e e 4 4 f b e 4 4 e f f . .
+                . . f e d d f 1 4 d 4 e e f . .
+                . . . f d d d e e e e e f . . .
+                . . . f e 4 e d d 4 f . . . . .
+                . . . f 2 2 e d d e f . . . . .
+                . . f f 5 5 f e e f f f . . . .
+                . . f f f f f f f f f f . . . .
+                . . . f f f . . . f f . . . . .
+                """),
+            img("""
+                . . . . f f f f f f . . . . . .
+                . . . f 2 f e e e e f f . . . .
+                . . f 2 2 2 f e e e e f f . . .
+                . . f e e e e f f e e e f . . .
+                . f e 2 2 2 2 e e f f f f . . .
+                . f 2 e f f f f 2 2 2 e f . . .
+                . f f f e e e f f f f f f f . .
+                . f e e 4 4 f b e 4 4 e f f . .
+                . . f e d d f 1 4 d 4 e e f . .
+                . . . f d d d d 4 e e e f . . .
+                . . . f e 4 4 4 e e f f . . . .
+                . . . f 2 2 2 e d d 4 . . . . .
+                . . . f 2 2 2 e d d e . . . . .
+                . . . f 5 5 4 f e e f . . . . .
+                . . . . f f f f f f . . . . . .
+                . . . . . . f f f . . . . . . .
+                """),
+            img("""
+                . . . . . . . . . . . . . . . .
+                . . . . f f f f f f . . . . . .
+                . . . f 2 f e e e e f f . . . .
+                . . f 2 2 2 f e e e e f f . . .
+                . . f e e e e f f e e e f . . .
+                . f e 2 2 2 2 e e f f f f . . .
+                . f 2 e f f f f 2 2 2 e f . . .
+                . f f f e e e f f f f f f f . .
+                . f e e 4 4 f b e 4 4 e f f . .
+                . . f e d d f 1 4 d 4 e e f . .
+                . . . f d d d d 4 e e e f . . .
+                . . . f e 4 4 4 e d d 4 . . . .
+                . . . f 2 2 2 2 e d d e . . . .
+                . . f f 5 5 4 4 f e e f . . . .
+                . . f f f f f f f f f f . . . .
+                . . . f f f . . . f f . . . . .
+                """)],
+        100,
+        True)
+controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
+
+def on_overlap_tile(sprite3, location):
+    overworld.set_overworld16(universeB)
+    overworld.load_map(2, 2)
+    overworld.set_player_sprite(Hiro)
+    game.splash("PALM CITY")
+scene.on_overlap_tile(SpriteKind.player,
+    sprites.dungeon.purple_outer_south0,
+    on_overlap_tile)
+
+def on_right_pressed():
+    global lastDirection
+    lastDirection = 3
+    animation.run_image_animation(Hiro,
+        [img("""
+                . . . . . . f f f f f f . . . .
+                . . . . f f e e e e f 2 f . . .
+                . . . f f e e e e f 2 2 2 f . .
+                . . . f e e e f f e e e e f . .
+                . . . f f f f e e 2 2 2 2 e f .
+                . . . f e 2 2 2 f f f f e 2 f .
+                . . f f f f f f f e e e f f f .
+                . . f f e 4 4 e b f 4 4 e e f .
+                . . f e e 4 d 4 1 f d d e f . .
+                . . . f e e e 4 d d d d f . . .
+                . . . . f f e e 4 4 4 e f . . .
+                . . . . . 4 d d e 2 2 2 f . . .
+                . . . . . e d d e 2 2 2 f . . .
+                . . . . . f e e f 4 5 5 f . . .
+                . . . . . . f f f f f f . . . .
+                . . . . . . . f f f . . . . . .
+                """),
+            img("""
+                . . . . . . . . . . . . . . . .
+                . . . . . . f f f f f f . . . .
+                . . . . f f e e e e f 2 f . . .
+                . . . f f e e e e f 2 2 2 f . .
+                . . . f e e e f f e e e e f . .
+                . . . f f f f e e 2 2 2 2 e f .
+                . . . f e 2 2 2 f f f f e 2 f .
+                . . f f f f f f f e e e f f f .
+                . . f f e 4 4 e b f 4 4 e e f .
+                . . f e e 4 d 4 1 f d d e f . .
+                . . . f e e e e e d d d f . . .
+                . . . . . f 4 d d e 4 e f . . .
+                . . . . . f e d d e 2 2 f . . .
+                . . . . f f f e e f 5 5 f f . .
+                . . . . f f f f f f f f f f . .
+                . . . . . f f . . . f f f . . .
+                """),
+            img("""
+                . . . . . . f f f f f f . . . .
+                . . . . f f e e e e f 2 f . . .
+                . . . f f e e e e f 2 2 2 f . .
+                . . . f e e e f f e e e e f . .
+                . . . f f f f e e 2 2 2 2 e f .
+                . . . f e 2 2 2 f f f f e 2 f .
+                . . f f f f f f f e e e f f f .
+                . . f f e 4 4 e b f 4 4 e e f .
+                . . f e e 4 d 4 1 f d d e f . .
+                . . . f e e e 4 d d d d f . . .
+                . . . . f f e e 4 4 4 e f . . .
+                . . . . . 4 d d e 2 2 2 f . . .
+                . . . . . e d d e 2 2 2 f . . .
+                . . . . . f e e f 4 5 5 f . . .
+                . . . . . . f f f f f f . . . .
+                . . . . . . . f f f . . . . . .
+                """),
+            img("""
+                . . . . . . . . . . . . . . . .
+                . . . . . . f f f f f f . . . .
+                . . . . f f e e e e f 2 f . . .
+                . . . f f e e e e f 2 2 2 f . .
+                . . . f e e e f f e e e e f . .
+                . . . f f f f e e 2 2 2 2 e f .
+                . . . f e 2 2 2 f f f f e 2 f .
+                . . f f f f f f f e e e f f f .
+                . . f f e 4 4 e b f 4 4 e e f .
+                . . f e e 4 d 4 1 f d d e f . .
+                . . . f e e e 4 d d d d f . . .
+                . . . . 4 d d e 4 4 4 e f . . .
+                . . . . e d d e 2 2 2 2 f . . .
+                . . . . f e e f 4 4 5 5 f f . .
+                . . . . f f f f f f f f f f . .
+                . . . . . f f . . . f f f . . .
+                """)],
+        100,
+        True)
+controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_a_released():
     if hasTools:
@@ -568,169 +1174,17 @@ def on_a_released():
                 False)
         pause(500)
         endHiroAnim()
-    else:
-        pass
 controller.A.on_event(ControllerButtonEvent.RELEASED, on_a_released)
 
-def on_left_pressed():
-    global lastDirection
-    lastDirection = 2
-    animation.run_image_animation(Hiro,
-        [img("""
-                . . . . f f f f f f . . . . . .
-                . . . f 2 f e e e e f f . . . .
-                . . f 2 2 2 f e e e e f f . . .
-                . . f e e e e f f e e e f . . .
-                . f e 2 2 2 2 e e f f f f . . .
-                . f 2 e f f f f 2 2 2 e f . . .
-                . f f f e e e f f f f f f f . .
-                . f e e 4 4 f b e 4 4 e f f . .
-                . . f e d d f 1 4 d 4 e e f . .
-                . . . f d d d d 4 e e e f . . .
-                . . . f e 4 4 4 e e f f . . . .
-                . . . f 2 2 2 e d d 4 . . . . .
-                . . . f 2 2 2 e d d e . . . . .
-                . . . f 5 5 4 f e e f . . . . .
-                . . . . f f f f f f . . . . . .
-                . . . . . . f f f . . . . . . .
-                """),
-            img("""
-                . . . . . . . . . . . . . . . .
-                . . . . f f f f f f . . . . . .
-                . . . f 2 f e e e e f f . . . .
-                . . f 2 2 2 f e e e e f f . . .
-                . . f e e e e f f e e e f . . .
-                . f e 2 2 2 2 e e f f f f . . .
-                . f 2 e f f f f 2 2 2 e f . . .
-                . f f f e e e f f f f f f f . .
-                . f e e 4 4 f b e 4 4 e f f . .
-                . . f e d d f 1 4 d 4 e e f . .
-                . . . f d d d e e e e e f . . .
-                . . . f e 4 e d d 4 f . . . . .
-                . . . f 2 2 e d d e f . . . . .
-                . . f f 5 5 f e e f f f . . . .
-                . . f f f f f f f f f f . . . .
-                . . . f f f . . . f f . . . . .
-                """),
-            img("""
-                . . . . f f f f f f . . . . . .
-                . . . f 2 f e e e e f f . . . .
-                . . f 2 2 2 f e e e e f f . . .
-                . . f e e e e f f e e e f . . .
-                . f e 2 2 2 2 e e f f f f . . .
-                . f 2 e f f f f 2 2 2 e f . . .
-                . f f f e e e f f f f f f f . .
-                . f e e 4 4 f b e 4 4 e f f . .
-                . . f e d d f 1 4 d 4 e e f . .
-                . . . f d d d d 4 e e e f . . .
-                . . . f e 4 4 4 e e f f . . . .
-                . . . f 2 2 2 e d d 4 . . . . .
-                . . . f 2 2 2 e d d e . . . . .
-                . . . f 5 5 4 f e e f . . . . .
-                . . . . f f f f f f . . . . . .
-                . . . . . . f f f . . . . . . .
-                """),
-            img("""
-                . . . . . . . . . . . . . . . .
-                . . . . f f f f f f . . . . . .
-                . . . f 2 f e e e e f f . . . .
-                . . f 2 2 2 f e e e e f f . . .
-                . . f e e e e f f e e e f . . .
-                . f e 2 2 2 2 e e f f f f . . .
-                . f 2 e f f f f 2 2 2 e f . . .
-                . f f f e e e f f f f f f f . .
-                . f e e 4 4 f b e 4 4 e f f . .
-                . . f e d d f 1 4 d 4 e e f . .
-                . . . f d d d d 4 e e e f . . .
-                . . . f e 4 4 4 e d d 4 . . . .
-                . . . f 2 2 2 2 e d d e . . . .
-                . . f f 5 5 4 4 f e e f . . . .
-                . . f f f f f f f f f f . . . .
-                . . . f f f . . . f f . . . . .
-                """)],
-        100,
-        True)
-controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
-
-def on_right_pressed():
-    global lastDirection
-    lastDirection = 3
-    animation.run_image_animation(Hiro,
-        [img("""
-                . . . . . . f f f f f f . . . .
-                . . . . f f e e e e f 2 f . . .
-                . . . f f e e e e f 2 2 2 f . .
-                . . . f e e e f f e e e e f . .
-                . . . f f f f e e 2 2 2 2 e f .
-                . . . f e 2 2 2 f f f f e 2 f .
-                . . f f f f f f f e e e f f f .
-                . . f f e 4 4 e b f 4 4 e e f .
-                . . f e e 4 d 4 1 f d d e f . .
-                . . . f e e e 4 d d d d f . . .
-                . . . . f f e e 4 4 4 e f . . .
-                . . . . . 4 d d e 2 2 2 f . . .
-                . . . . . e d d e 2 2 2 f . . .
-                . . . . . f e e f 4 5 5 f . . .
-                . . . . . . f f f f f f . . . .
-                . . . . . . . f f f . . . . . .
-                """),
-            img("""
-                . . . . . . . . . . . . . . . .
-                . . . . . . f f f f f f . . . .
-                . . . . f f e e e e f 2 f . . .
-                . . . f f e e e e f 2 2 2 f . .
-                . . . f e e e f f e e e e f . .
-                . . . f f f f e e 2 2 2 2 e f .
-                . . . f e 2 2 2 f f f f e 2 f .
-                . . f f f f f f f e e e f f f .
-                . . f f e 4 4 e b f 4 4 e e f .
-                . . f e e 4 d 4 1 f d d e f . .
-                . . . f e e e e e d d d f . . .
-                . . . . . f 4 d d e 4 e f . . .
-                . . . . . f e d d e 2 2 f . . .
-                . . . . f f f e e f 5 5 f f . .
-                . . . . f f f f f f f f f f . .
-                . . . . . f f . . . f f f . . .
-                """),
-            img("""
-                . . . . . . f f f f f f . . . .
-                . . . . f f e e e e f 2 f . . .
-                . . . f f e e e e f 2 2 2 f . .
-                . . . f e e e f f e e e e f . .
-                . . . f f f f e e 2 2 2 2 e f .
-                . . . f e 2 2 2 f f f f e 2 f .
-                . . f f f f f f f e e e f f f .
-                . . f f e 4 4 e b f 4 4 e e f .
-                . . f e e 4 d 4 1 f d d e f . .
-                . . . f e e e 4 d d d d f . . .
-                . . . . f f e e 4 4 4 e f . . .
-                . . . . . 4 d d e 2 2 2 f . . .
-                . . . . . e d d e 2 2 2 f . . .
-                . . . . . f e e f 4 5 5 f . . .
-                . . . . . . f f f f f f . . . .
-                . . . . . . . f f f . . . . . .
-                """),
-            img("""
-                . . . . . . . . . . . . . . . .
-                . . . . . . f f f f f f . . . .
-                . . . . f f e e e e f 2 f . . .
-                . . . f f e e e e f 2 2 2 f . .
-                . . . f e e e f f e e e e f . .
-                . . . f f f f e e 2 2 2 2 e f .
-                . . . f e 2 2 2 f f f f e 2 f .
-                . . f f f f f f f e e e f f f .
-                . . f f e 4 4 e b f 4 4 e e f .
-                . . f e e 4 d 4 1 f d d e f . .
-                . . . f e e e 4 d d d d f . . .
-                . . . . 4 d d e 4 4 4 e f . . .
-                . . . . e d d e 2 2 2 2 f . . .
-                . . . . f e e f 4 4 5 5 f f . .
-                . . . . f f f f f f f f f f . .
-                . . . . . f f . . . f f f . . .
-                """)],
-        100,
-        True)
-controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
+def on_overlap_tile2(sprite4, location2):
+    if gotOrders:
+        overworld.set_overworld16(libertyIsland)
+        overworld.load_map(1, 3)
+        overworld.set_player_sprite(Hiro)
+        game.splash("LIBERTY ISLAND")
+scene.on_overlap_tile(SpriteKind.player,
+    sprites.dungeon.purple_outer_east0,
+    on_overlap_tile2)
 
 def on_down_pressed():
     global lastDirection
@@ -813,20 +1267,482 @@ def on_down_pressed():
 controller.down.on_event(ControllerButtonEvent.PRESSED, on_down_pressed)
 
 def initHiro():
-    global Hiro, lastDirection, hasTools
+    global Hiro, lastDirection, hasTools, gotOrders
     Hiro = sprites.create(assets.image("""
             HiroStandFront
             """),
         SpriteKind.player)
     controller.move_sprite(Hiro)
+    info.set_life(10)
     lastDirection = 1
     hasTools = False
-hasTools = False
+    gotOrders = False
+
+def on_on_overlap2(sprite5, otherSprite2):
+    while Hiro.overlaps_with(Dummy):
+        pause(750)
+        if Dummy.vx > 0:
+            animation.run_image_animation(Dummy,
+                [img("""
+                        ........................
+                        ........................
+                        ...........ccc..........
+                        ...........cccc.........
+                        .......ccc..ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb555555ff155555c
+                        ......cb55555555ff55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb13bbc.
+                        ...cccd55ddddd555b3335c.
+                        .....bdddddddddd55b335c.
+                        ..cccdddddb55bbddd5555c.
+                        ..cccdddddb555bbbbcccc..
+                        ...ccddddddb5555cbcdc...
+                        ccccbdddddd5cb55cbcc....
+                        cddddddddd5555ccbbc.....
+                        .cddddddbdd555bbbcc.....
+                        ..ccdddbbbdd55cbcdc.....
+                        ....ccbbcbddddccdddcc...
+                        ......cccdd555dcccccc...
+                        ........cccccccc........
+                        """),
+                    img("""
+                        .........ccc............
+                        .........cccccccc.......
+                        ......cc..cc55555cc.....
+                        ......cccc555555555c....
+                        ......ccb55555555555c...
+                        ...cc..b55555ff155555c..
+                        ...cccb5555555ff55d55c..
+                        ....ccb55555d55555555c..
+                        .....b55555d5555d5555c..
+                        ..cc.b555ddd55555bbbbc..
+                        ..cccd55ddddd5555d555c..
+                        ...ccdd5dbdddbbbd555c...
+                        ....bdddb555bbbbbccc....
+                        ..cccdddb555cbbbbbbc....
+                        ...ccddddb555cbbbbbbc...
+                        ....cdddddb555cbbbbbc...
+                        ...ccddddddb55cbbbbbcc..
+                        ..ccbddddd55bcbbbbbbcc..
+                        ccdddddddd5555bbbbbbc...
+                        cdddddddbdd555bbbbbc....
+                        .ccddddbbbdd55cbbccc....
+                        ...cccbbcbddddccdddcc...
+                        ......cccdd555dcccccc...
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........ccc.............
+                        ........cccccccc........
+                        .....cc..cc55555cc......
+                        .....cccc555555555c.....
+                        .....ccb55555555555c....
+                        ...cc.b5555bcc555555c...
+                        ...ccb55555555c55d55c...
+                        ....cb5555dd55555555c...
+                        .....5555dd5555d5555c...
+                        ..cc.555dd555555dbbbc...
+                        ..ccc55ddd555555d555c...
+                        ...ccd5dbdd5555d555c....
+                        ....bdddb555bbbbbccc....
+                        ..cccdddb555cbbbbbbbc...
+                        ...ccddddb555cbbbbbbbc..
+                        ....cdddddb555cbbbbbbc..
+                        ...ccddddddb55cbbbbbbcc.
+                        ...cbddddd55bcbbbbbbbcc.
+                        ..cbdddddd5555bbbbbbbc..
+                        .cddddddbdd555bbbbbbc...
+                        cddddddbbbdd55cbbccc....
+                        ccccccbbcbddddccdddcc...
+                        ......cccdd555dcccccc...
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ...........ccc..........
+                        ...........cccc.........
+                        .......ccc..ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb55555bcc555555c
+                        ......cb555555555c55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb1bbbc.
+                        ....ccd55ddddd5bbbb335c.
+                        ...ccbdddddddd5bbbb335c.
+                        .ccccddddddddd55bbb335c.
+                        cdcccdddddb55bb5bb3335c.
+                        cddbddddddb555bb5b3335c.
+                        cddddddddddb5555b53335c.
+                        ccddddddbd55bb55c5555c..
+                        .ccddddbbbdd55cccbccc...
+                        ...ccbbbcbddddccdddc....
+                        .....ccccdd555dccccc....
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ...........ccc..........
+                        ...........cccc.........
+                        .......ccc..ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb55555bcc555555c
+                        ......cb555555555c55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb1bbbc.
+                        ....ccd55ddddd5bbbb335c.
+                        ...ccbdddddddd5bbbb335c.
+                        .ccccddddddddd55bb3335c.
+                        cdcccdddddb55bb55b3335c.
+                        cddbddddddb555bb553335c.
+                        cddddddddddb5555b5555c..
+                        ccddddddbd55bb55cbccc...
+                        .ccddddbbbdd55ccbbc.....
+                        ...ccbbbcbddddccdddc....
+                        .....ccccdd555dccccc....
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ...........ccc..........
+                        ...........cccc.........
+                        .......ccc..ccccccc.....
+                        .......cccccc555555cc...
+                        ........ccb5555555555c..
+                        .....cc..b555555555555c.
+                        .....cccb55555bcc555555c
+                        ......cb555555555c55d55c
+                        ......b5555555555555555c
+                        ...cc.b555dd5555bb1bbbc.
+                        ....ccd55ddddd55bbb335c.
+                        ...ccbddddddddd5bb3335c.
+                        .ccccdddddddddd55b3335c.
+                        cdcccdddddb55bbd553335c.
+                        cddbddddddb555bb55555c..
+                        cddddddddddb5555bbccc...
+                        ccddddddbd55bb55cbc.....
+                        .ccddddbbbdd55ccbdc.....
+                        ...ccbbbcbddddccdddc....
+                        .....ccccdd555dccccc....
+                        ........cccccccc........
+                        """)],
+                200,
+                True)
+        else:
+            animation.run_image_animation(Dummy,
+                [img("""
+                        ........................
+                        ........................
+                        ..........ccc...........
+                        .........cccc...........
+                        .....ccccccc..ccc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555551ff555555bccc.....
+                        c55d55ff55555555bc......
+                        c5555555555555555b......
+                        .cbb31bb5555dd555b.cc...
+                        .c5333b555ddddd55dccc...
+                        .c533b55ddddddddddb.....
+                        .c5555dddbb55bdddddccc..
+                        ..ccccbbbb555bdddddccc..
+                        ...cdcbc5555bddddddcc...
+                        ....ccbc55bc5ddddddbcccc
+                        .....cbbcc5555dddddddddc
+                        .....ccbbb555ddbddddddc.
+                        .....cdcbc55ddbbbdddcc..
+                        ...ccdddccddddbcbbcc....
+                        ...ccccccd555ddccc......
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ............ccc.........
+                        .......cccccccc.........
+                        .....cc55555cc..cc......
+                        ....c555555555cccc......
+                        ...c55555555555bcc......
+                        ..c555551ff55555b..cc...
+                        ..c55d55ff5555555bccc...
+                        ..c55555555d55555bcc....
+                        ..c5555d5555d55555b.....
+                        ..cbbbb55555ddd555b.cc..
+                        ..c555d5555ddddd55dccc..
+                        ...c555dbbbdddbd5ddcc...
+                        ....cccbbbbb555bdddb....
+                        ....cbbbbbbc555bdddccc..
+                        ...cbbbbbbc555bddddcc...
+                        ...cbbbbbc555bdddddc....
+                        ..ccbbbbbc55bddddddcc...
+                        ..ccbbbbbbcb55dddddbcc..
+                        ...cbbbbbb5555ddddddddcc
+                        ....cbbbbb555ddbdddddddc
+                        ....cccbbc55ddbbbddddcc.
+                        ...ccdddccddddbcbbccc...
+                        ...ccccccd555ddccc......
+                        ........cccccccc........
+                        """),
+                    img("""
+                        .............ccc........
+                        ........cccccccc........
+                        ......cc55555cc..cc.....
+                        .....c555555555cccc.....
+                        ....c55555555555bcc.....
+                        ...c555555ccb5555b.cc...
+                        ...c55d55c55555555bcc...
+                        ...c55555555dd5555bc....
+                        ...c5555d5555dd5555.....
+                        ...cbbbd555555dd555.cc..
+                        ...c555d555555ddd55ccc..
+                        ....c555d5555ddbd5dcc...
+                        ....cccbbbbb555bdddb....
+                        ...cbbbbbbbc555bdddccc..
+                        ..cbbbbbbbc555bddddcc...
+                        ..cbbbbbbc555bdddddc....
+                        .ccbbbbbbc55bddddddcc...
+                        .ccbbbbbbbcb55dddddbc...
+                        ..cbbbbbbb5555ddddddbc..
+                        ...cbbbbbb555ddbddddddc.
+                        ....cccbbc55ddbbbddddddc
+                        ...ccdddccddddbcbbcccccc
+                        ...ccccccd555ddccc......
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ..........ccc...........
+                        .........cccc...........
+                        .....ccccccc..ccc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555555ccb55555bccc.....
+                        c55d55c555555555bc......
+                        c5555555555555555b......
+                        .cbbb1bb5555dd555b.cc...
+                        .c533bbbb5ddddd55dcc....
+                        .c533bbbb5ddddddddbcc...
+                        .c533bbb55dddddddddcccc.
+                        .c5333bb5bb55bdddddcccdc
+                        .c5333b5bb555bddddddbddc
+                        .c53335b5555bddddddddddc
+                        ..c5555c55bb55dbddddddcc
+                        ...cccbccc55ddbbbddddcc.
+                        ....cdddccddddbcbbbcc...
+                        ....cccccd555ddcccc.....
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ..........ccc...........
+                        .........cccc...........
+                        .....ccccccc..ccc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555555ccb55555bccc.....
+                        c55d55c555555555bc......
+                        c5555555555555555b......
+                        .cbbb1bb5555dd555b.cc...
+                        .c533bbbb5ddddd55dcc....
+                        .c533bbbb5ddddddddbcc...
+                        .c5333bb55dddddddddcccc.
+                        .c5333b55bb55bdddddcccdc
+                        .c533355bb555bddddddbddc
+                        ..c5555b5555bddddddddddc
+                        ...cccbc55bb55dbddddddcc
+                        .....cbbcc55ddbbbddddcc.
+                        ....cdddccddddbcbbbcc...
+                        ....cccccd555ddcccc.....
+                        ........cccccccc........
+                        """),
+                    img("""
+                        ........................
+                        ........................
+                        ........................
+                        ..........ccc...........
+                        .........cccc...........
+                        .....ccccccc..ccc.......
+                        ...cc555555cccccc.......
+                        ..c5555555555bcc........
+                        .c555555555555b..cc.....
+                        c555555ccb55555bccc.....
+                        c55d55c555555555bc......
+                        c5555555555555555b......
+                        .cbbb1bb5555dd555b.cc...
+                        .c533bbb55ddddd55dcc....
+                        .c5333bb5dddddddddbcc...
+                        .c5333b55ddddddddddcccc.
+                        .c533355dbb55bdddddcccdc
+                        ..c55555bb555bddddddbddc
+                        ...cccbb5555bddddddddddc
+                        .....cbc55bb55dbddddddcc
+                        .....cdbcc55ddbbbddddcc.
+                        ....cdddccddddbcbbbcc...
+                        ....cccccd555ddcccc.....
+                        ........cccccccc........
+                        """)],
+                200,
+                True)
+        if controller.A.is_pressed():
+            sprites.destroy(Dummy, effects.disintegrate, 500)
+        else:
+            info.change_life_by(-1)
+sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap2)
+
+Dummy: Sprite = None
 mySprite: Sprite = None
+libertyIsland: List[List[tiles.TileMapData]] = []
+universeB: List[List[tiles.TileMapData]] = []
+gotOrders = False
+hasTools = False
 Hiro: Sprite = None
 lastDirection = 0
+scene.set_background_image(img("""
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff99d99bbbbbcfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff99ddbdd66168bcccccc9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff999ddbbbd66888111ccccccb99fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9966ddbbbb6688811818ccccccbbc99fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdd69dddbbb66618881888818818cccccbe9fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffddd96dd6b6dbd68888888888888888cccccc99fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffffffdbbd9666666dbb668886888888cccccccccccccc9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdbbb99666966d68866888888cccccccccccccccccc69ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffdbbb999669666666888888888ccccbbbcc8bcccccccccc9fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffdbbb999666666666888888888cbbcbe8bbbcbcccccbbcccb9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffff9bbb999666666666688888888bccb888888bbbbb88888bcccccfffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffdbbb999669666666866888868bbbbb8888888ccc888b88bbc8cccffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffdbbb9d99ddd666668868888688bbcb888888888bc888bcc8bc886c9fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffbbbbbbddd966666888688888888888888b88888888888cc8ccc886c9ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffdbbbbbbdd6966666666868888888888bbdbbebb8888888888bcc8c86c9fffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffff9bbdbddd6666666666888688868888ddddddddde8888888888bccbbccccfffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffff9dbb9dd666666666668868888888bddddddbdbbddcccccd88b8ebccbbbbc9ffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffdd99999666666666668868888888bdddddbbbbbdbbbccccccb8bbbccc8bbb9fffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffff9dd99996696966666666668888bbbdddddbbbddbbbbbbbbbcccc8bcccbb8bbcfffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffff9d999996666966666668688888bbdddbbbbdbbbbbbbbbbbcccccc8bbccc88bc9ffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffff99999999666996696668868868bbdddddbbbdbbbbbbbbbbbbcbccc88bcccc88c6ffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffff999996696669666966d8868666bddbbbddbbdbbbbbbbbbbbbcccccc88bbccc8869fffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffff9999996699669666666d6688668bddbbdbbbbbbbbbbbbbbbbbccccccc88bcccc866fffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffff9dd999669966666666666688668bdddbbbbbbbbbbbbbbbbbbbccccccc888bbccc669ffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffff999999669d69666666666688868bddbbbdbbbbbbbbbbbbbbbbcccccccc888bbcc869ffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff99999996ddd69666666688888868ddbddbbbbbbbbbbbbbbbbbbccccccccc888888866ffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff999999969ddd6669666688688888bbbbbbbbbbbbbbbbbbbbbbbbccbccccc8888888869fffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff99999966ddddd669666688888888bbbbbbbbbbbbbbbbbbbbbbbcbccccccccc88888869fffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff999bb99666dddd6666666668886888bbbbbbbbbbbbbbbbbbbbbbcccccccccccc8888889fffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff99bbbb966696666666666888886888bbbbbbbbbbbbbbbbbbbbbbcbccccccccccc888886fffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff99bbdbb666969666666668888868888bbbbbbbbbbbbbbbbbbbbccbccccccccccc8888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff99dbbbbb6696966666666668886868888bbbbeb888bbbbbbbbbcccccccccccccc8888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff99bbbbbbe6969666666666888888888888888888888bbbbbbbbccccccccccccc88888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbccbc66966666666688888688888888888d888ebbbbbbbcccccccccccbb88888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbcc69996666688668886888888dd88dbbd88bbbbbbbccccccccccceb88888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbbccc999966668868888888888ddddbbbbd88cbbbbbbbbccccccccc8888888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9ebbbbcccccccc9966666688888888888888ddbbbb888bbbbbbbbccccccccc8888888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbccccccccc666666888866888888888dddddbdd88bbbbbbccccccccc88888888bb9ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffbbbbbbcccccccccc6666688888888888888888d8888888bbbbbbccccccccc88888888bb9ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9dbbbbccbbccccccb666688868888888888888888888888bbbbbccccccccc888888888b9ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9dbbbbbbbbcccccbb66666688888888888888888888888bbbbccccccccccc88888888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbcccccccb666666688888888888888888888888bbbbcccccccccc888888888869ffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff9bbbbbbbccccccbb666666688888888888888888888888bbbbcccccccccc88888888886fffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffff99bbbbbbbbccccb6666668888888888888888888888888bbbbcbcccccccc88888888886fffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff99dbbbcbbccccb6666668888888888888888888888888bbbbbccccccccc888cc888869fffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff99dbbbcccccccc6666668688688888888888888888888bbbbccccccccc8888cc888869fffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff999bbbbbccccbc6666666688688888888888888888888bbbbcccccccc88888dd88886ffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffff969bbbbbbcccc69666666668688868888888888888888bbbbccccccc88888bd888886ffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffff99bbbbcccccc696bb668888888868888888888888888bbbcccccccc8888bbd888869ffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffff9999bbbcccc9666dbbb8888888888888888888888888ccbcccccccc8888bc888886fffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffff699bbbbccc966966bbb8888888888888888888888888bbbbccccc88888bcc88869fffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffff9999bbcccc666666dbbdd88888888688888888888888bbcccccc88888888888669fffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffff9699dbcccc66666666bb6d8888888688888888888888bbcccccc8888888888869ffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffff9696bbbcc66666666dbbd6886868888888888888888bbcbccc8888888888d669ffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffff999ebbccc666666666dbb8868888688888888888888bbbccc8888888889b69fffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffff969ccbcc66996666666bbb868888888888888888888bbbc888888888888b6ffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffff96ccccc966966666666bb8688666888888888888888b8888888888888699ffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffff99ccbc996666666666dbb6888668888888888888888888888888888869fffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffff969ccb9666666666666dbb88866888888888888888888888888888869ffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffff969ccc6696666666666dd8888668888888888888888888888888866fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffff969cc9669666966d66dd8888868888888888888888888bb8888669fffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffff96ccc66699669dddd888868888888888888888888888be888669ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffff96c66669966666dd88886666668888888888888888dd888669fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffff96966669966ddd686886868888888888888888888d888669ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffff969666696666666688686888888888888888888888669ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffff9966966966666666886888888888888886888888669fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9699996666666888888888888888888118888699ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff969996666668888881188888888881888669ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff996999666688881818888888881886669ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9961161186618811188886116699ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff99161111611118111666699fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9999661166669999ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff999999999fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    """))
 music.play(music.melody_playable(music.power_up),
     music.PlaybackMode.UNTIL_DONE)
-game.splash("THE MENACE OF TIME", "Alpha 1.0.5.1")
+game.splash("THE MENACE OF TIME", "Alpha 1.0.8")
 initHiro()
 initOverworld()
+music.play(music.create_song(hex("""
+        0096000408070205001c000f0a006400f4010a0000040000000000000000000000000000000002c80000000800012208001000012910001800012018002000012520002800012028003000012430003200011e34003600012038003a00021e203a003c00011d40004200011e44004600012048004a00021e204a004c00011d60006200011e64006600012068006a00021e206a006c00011d70007800012278008000011d80008800012288009000021e299000980001249800a000031e252aa000a8000120a800b0000127b000b8000120b800c0000127c000c800021e25c800d00002202ad000d8000125d800e000012209010e02026400000403780000040a000301000000640001c80000040100000000640001640000040100000000fa0004af00000401c80000040a00019600000414000501006400140005010000002c0104dc00000401fa0000040a0001c8000004140005d0076400140005d0070000c800029001f40105c201f4010a0005900114001400039001000005c201f4010500058403050032000584030000fa00049001000005c201f4010500058403c80032000584030500640005840300009001049001000005c201f4010500058403c80064000584030500c8000584030000f40105ac0d000404a00f00000a0004ac0d2003010004a00f0000280004ac0d9001010004a00f0000280002d00700040408070f0064000408070000c80003c800c8000e7d00c80019000e64000f0032000e78000000fa00032c01c8000ee100c80019000ec8000f0032000edc000000fa0003f401c8000ea901c80019000e90010f0032000ea4010000fa0001c8000004014b000000c800012c01000401c8000000c8000190010004012c010000c80002c800000404c8000f0064000496000000c80002c2010004045e010f006400042c010000640002c409000404c4096400960004f6090000f40102b80b000404b80b64002c0104f40b0000f401022003000004200300040a000420030000ea01029001000004900100040a000490010000900102d007000410d0076400960010d0070000c8004b00300031000103340035000104380039000203043a003b000102400041000103440045000104480049000203044a004b000102500051000103540055000104580059000203045a005b000102
+        """)),
+    music.PlaybackMode.LOOPING_IN_BACKGROUND)
