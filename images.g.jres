@@ -1,0 +1,22 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///7gRAAA/+/v7k9NAPD/Lv/k/v8A8O/yv9EuQv//4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HiroStandFront"
+    },
+    "image2": {
+        "data": "hwQwADAAAAAAAABARkRGREZERkRGRGxmZmZmxswAAAAAAADAbMZsxmzGbMZsxkxmZmZmZsYMAAAAAADAZsZmxmbGZsZmxkxsZmZmZmbGAAAAAAAiLiLiIiIuIuIiwkzL5u7u7m5mDAAAAAAiLiLiIiIuIuIiYkzEJN7d3W1EZAAAACDu7u7u7u7u7u7ubEzEJN7P/WzkTgYAACAuIuIiIi4i4iIibEzEJN7P/WzkTmQAACAuIuIiIi4i4iIiZkzEJN7d3W3kTs4AAO7u7u7u7u7u7u7OxkbEJN7P/WxERM4AAC4i4iIiLiLiIiLOxkbEJN7P/WzkTs4AAC4i4iIiLiLiIiJuxkbEJN7d3W3kTmQA4O7u7u7u7u7u7u5sbEbE5O7u7m7kTmQAICLiIiIuIuIiIuJsTEbERERERERERGQAICLiIiIuIuIiIuJmTGbMzMzMzMzMzMwA4u7u7u7u7u7u7s5mRsbbEWFmZmZmZmYAIuIiIi4iIi4iIs7GtEwUYWZmZmZmZmYAIuIiIi4iIi4iIm7GxEth5v7/7+7+/+8g7u7u7u7u7u7u7mxmxERhTkREREREREQg4iIi4iIi4iIi4mxMZERh7u7u7u7u7u4g4iIi4iIi4iIi4mZMZERhTkT/TkRERETu7u7u7u7u7u7uzmZGZERhTuT/TkRERETiIiIuIuIiIi4izsZEZERh7v7/7u7u7u7u7u7u7u7u7u7ubsZEZERhTvT/TkREREQiIiIiIiIiIiIiYsZEZERhTvT/TkREREQiIiIiIiIiIiIiYsZEZERh7v7/7u7u7u7u7u7u7u7u7u7ubsZEZERhTvT/TkREREQiLiIuIuIiIi4izsZEZERhTvT/TkRERETu7u7u7u7u7u7uzmZGZERh7u7/7v7/7u4g4iIi4iIi4iIi4mZMZERhTkT/TuRPT0Qg4iIi4iIi4iIi4mxMZERhTkTkTuRPT0Qg7u7u7u7u7u7u7mxmxERh7u7u7u7/7u4AIuIiIi4iIi4iIm7GxEth5u7u7u7u7u4AIuIiIi4iIi4iIs7GtEwUYWZmZmZmZmYA4u7u7u7u7u7u7s5mRsbbEWFmZmZmZmYAICLiIiIuIuIiIuJmTGbMzMzMzMzMzMwAICLiIiIuIuIiIuJsTEbERERERERERGQA4O7u7u7u7u7u7u5sbEbE5O7u7m7kTmQAAC4i4iIiLiLiIiJuxkbEJN7d3W3kTmQAAC4i4iIiLiLiIiLOxkbEJN7P/WzkTs4AAO7u7u7u7u7u7u7OxkbEJN7P/WxERM4AACAuIuIiIi4i4iIiZkzEJN7d3W3kTs4AACAuIuIiIi4i4iIibEzEJN7P/WzkTmQAACDu7u7u7u7u7u7ubEzEJN7P/WzkTgYAAAAiLiLiIiIuIuIiYkzEJN7d3W1EZAAAAAAiLiLiIiIuIuIiwkzL5u7u7m5mDAAAAADAZsZmxmbGZsZmxkxsZmZmZmbGAAAAAADAbMZsxmzGbMZsxkxmZmZmZsYMAAAAAABARkRGREZERkRGRGxmZmZmxswAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "houseRed"
+    },
+    "image3": {
+        "data": "hwQNABAAAAAA8M//APDuAAD/z///7+QA8P/P/+T//wDw//y/Qb9n//////9Pfmf/////7kR+Zw//z+/uRH5nD//M7/9Pfmf/8P//v0G/Z//w///85P//AAD/z/z/7+QAAMDM/wDw7gAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Mustafa"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}

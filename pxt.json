@@ -1,0 +1,56 @@
+{
+    "name": "Menace Of Time Alpha 1.0.7",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-overworld": "github:riknoll/arcade-overworld#v0.0.5",
+        "controller": "*",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v2.0.59",
+        "tag": "v2.0.59",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/9ac32db04cae4ac1aca1d3d49e26192f6d6fac23",
+        "target": "2.0.59",
+        "pxt": "11.3.63",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#FFFFFF",
+        "#FF2121",
+        "#FF93C4",
+        "#FF8135",
+        "#FFF609",
+        "#249CA3",
+        "#78DC52",
+        "#003FAD",
+        "#87F2FF",
+        "#8E2EC4",
+        "#A4839F",
+        "#5C406c",
+        "#E5CDC4",
+        "#91463d",
+        "#000000"
+    ]
+}
