@@ -1,5 +1,6 @@
 {
     "name": "Menace Of Time Alpha 1.0.7",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "device": "*",
